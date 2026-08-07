@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AI Sign Language Translator</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🤟 AI Sign Language Translator</h1>
+
+<div class="camera">
+
+<img src="{{ url_for('video') }}" width="800">
+
+</div>
+
+<div class="info">
+
+<h2>Prediction</h2>
+
+<h1 id="label">--</h1>
+
+<h3 id="confidence">0%</h3>
+
+<h2>Current Word</h2>
+<h2>Sentence</h2>
+
+<h2 id="sentence">----</h2>
+
+<h2 id="word">----</h2>
+
+</div>
+
+</div>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>
