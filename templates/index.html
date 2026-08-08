@@ -3,48 +3,109 @@
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>AI Sign Language Translator</title>
+    <title>AI Sign Language Translator</title>
 
-<link rel="stylesheet"
-href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
 
 </head>
 
 <body>
 
-<div class="container">
+    <h1>🤟 AI Sign Language Translator</h1>
 
-<h1>🤟 AI Sign Language Translator</h1>
+    <div class="main">
 
-<div class="camera">
+        <!-- Camera -->
 
-<img src="{{ url_for('video') }}" width="800">
+        <div class="camera">
 
-</div>
+            <img
+                src="{{ url_for('video') }}"
+                id="video"
+                alt="Camera Feed">
 
-<div class="info">
+        </div>
 
-<h2>Prediction</h2>
+        <!-- Right Panel -->
 
-<h1 id="label">--</h1>
+        <div class="info">
 
-<h3 id="confidence">0%</h3>
+            <div class="card">
 
-<h2>Current Word</h2>
-<h2>Sentence</h2>
+                <h2>Prediction</h2>
 
-<h2 id="sentence">----</h2>
+                <h1 id="label">Waiting...</h1>
 
-<h2 id="word">----</h2>
+            </div>
 
-</div>
+            <div class="card">
 
-</div>
-<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+                <h2>Confidence</h2>
+
+                <h2 id="confidence">0%</h2>
+
+                <div class="progress">
+
+                    <div
+                        class="progress-fill"
+                        id="progress">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <h2>Current Word</h2>
+
+                <h2 id="word"></h2>
+
+            </div>
+
+            <div class="card">
+
+                <h2>Sentence</h2>
+
+                <h2 id="sentence"></h2>
+
+            </div>
+
+            <div class="buttons">
+
+                <button id="speakBtn">
+                    🔊 Speak
+                </button>
+
+                <button id="clearBtn">
+                    🗑 Clear
+                </button>
+
+                <button id="saveBtn">
+                    💾 Save
+                </button>
+
+                <button
+                    onclick="window.location='/history'">
+
+                    📜 History
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static',
+    filename='js/script.js') }}"></script>
 
 </body>
 

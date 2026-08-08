@@ -1,7 +1,23 @@
-venv/
-dataset/
+# Python
 __pycache__/
 *.pyc
-.DS_Store
-graphs/
+
+# Virtual Environment
+venv/
+
+# Dataset
+dataset/
+
+# Trained Models
 model/*.keras
+model/*.h5
+
+# macOS
+.DS_Store
+
+# History
+history.txt
+
+# IDE
+.vscode/
+.idea/
